@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: fit-content;
+    margin-inline: auto;
+}
+
+h1{
+    margin-block: 30px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+button{
+    width: 20%;
+}
+
+input{
+    height: 30px;
+    padding: 10px;
+    border-radius: 5px;
+}

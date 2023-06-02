@@ -1,4 +1,4 @@
-let today = new Date().toLocaleDateString()
+let today = new Date()
 console.log(today);
 let todoList = [];
 
@@ -24,19 +24,26 @@ function idUpdate(){
     })
 }
 
-setInterval(function () {
-    idUpdate();
-}, 100);
+
 
 let outputBox = document.getElementById('outputBox');
 function printTask (){
     outputBox.innerHTML ='';
     todoList.forEach((task) => {
         outputBox.innerHTML +=`
+        <div class="task">
         Name = ${task.name}
         id = ${task.id}
         date = ${task.createdDate}
+        </div>
+        <br />
         `
     })
 }
 
+// printTask();
+// idUpdate();
+
+setInterval(function () {
+    printTask(), idUpdate()
+}, 100)
